@@ -66,7 +66,7 @@ script.js
 style.css
 
 ##Installation
-link:
+link:https://github.com/esha11sys/Ecommerce-Recommendation-Engine.git
 
 
 Go to the project folder:
