@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Recommendation Engine</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script defer
+            src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>E-Commerce Recommendation Engine</h1>
+
+    <p class="subtitle">
+        AI Powered Personalized Product Recommendations
+    </p>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>Accuracy</h3>
+            <h2>87.4%</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>CTR</h3>
+            <h2>26.9%</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Conversion</h3>
+            <h2>15.6%</h2>
+        </div>
+
+        <div class="stat-card">
+            <h3>Revenue</h3>
+            <h2>18.2%</h2>
+        </div>
+
+    </div>
+
+    <div class="recommend-box">
+
+        <h2>Get Recommendations</h2>
+
+        <input
+            type="number"
+            id="userId"
+            placeholder="Enter User ID">
+
+        <button onclick="getRecommendations()">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Generate Recommendations
+        </button>
+
+    </div>
+
+    <div id="recommendationResult"
+         class="recommendation-result">
+    </div>
+
+    <h2 class="section-title">
+        Recommendation Models
+    </h2>
+
+    <div class="models">
+
+        <div class="model-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Content Based</h3>
+            <p>Recommends similar products.</p>
+        </div>
+
+        <div class="model-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Collaborative</h3>
+            <p>Uses similar user preferences.</p>
+        </div>
+
+        <div class="model-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Neural CF</h3>
+            <p>Deep learning recommendations.</p>
+        </div>
+
+        <div class="model-card">
+            <i class="fa-solid fa-robot"></i>
+            <h3>Transformer</h3>
+            <p>Sequential recommendation model.</p>
+        </div>
+
+        <div class="model-card">
+            <i class="fa-solid fa-code-branch"></i>
+            <h3>Hybrid</h3>
+            <p>Combines all recommendation methods.</p>
+        </div>
+
+    </div>
+
+    <div class="bottom-grid">
+
+        <div class="card">
+
+            <h2>A/B Testing</h2>
+
+            <button onclick="runABTest()">
+                Run A/B Test
+            </button>
+
+            <div id="abResult"></div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Analytics Dashboard</h2>
+
+            <button onclick="loadAnalytics()">
+                Load Analytics
+            </button>
+
+            <div id="analyticsResult"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
